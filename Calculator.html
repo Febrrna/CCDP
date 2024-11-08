@@ -1,0 +1,69 @@
+/**
+ * Kelas Calculator menyediakan metode untuk melakukan operasi dasar 
+ * aritmatika seperti penjumlahan, pengurangan, perkalian, dan pembagian.
+ */
+public class Calculator {
+
+    /**
+     * Menjumlahkan dua angka.
+     *
+     * @param a angka pertama
+     * @param b angka kedua
+     * @return hasil penjumlahan a dan b
+     */
+    public double add(double a, double b) {
+        return a + b;
+    }
+
+    /**
+     * Mengurangkan dua angka.
+     *
+     * @param a angka pertama
+     * @param b angka kedua
+     * @return hasil pengurangan a dengan b
+     */
+    public double subtract(double a, double b) {
+        return a - b;
+    }
+
+    /**
+     * Mengalikan dua angka.
+     *
+     * @param a angka pertama
+     * @param b angka kedua
+     * @return hasil perkalian a dan b
+     */
+    public double multiply(double a, double b) {
+        return a * b;
+    }
+
+    /**
+     * Membagi dua angka.
+     *
+     * @param a angka pembilang
+     * @param b angka penyebut
+     * @return hasil pembagian a dengan b
+     * @throws ArithmeticException jika b adalah 0
+     */
+    public double divide(double a, double b) {
+        if (b == 0) {
+            throw new ArithmeticException("Pembagian dengan nol tidak diperbolehkan.");
+        }
+        return a / b;
+    }
+
+    /**
+     * Metode utama untuk menjalankan aplikasi kalkulator.
+     *
+     * @param args argumen dari command line
+     */
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+        
+        // Contoh penggunaan metode kalkulator
+        System.out.println("Penjumlahan: " + calculator.add(5, 3));
+        System.out.println("Pengurangan: " + calculator.subtract(5, 3));
+        System.out.println("Perkalian: " + calculator.multiply(5, 3));
+        System.out.println("Pembagian: " + calculator.divide(5, 3));
+    }
+}
